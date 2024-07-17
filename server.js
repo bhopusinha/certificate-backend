@@ -2,15 +2,15 @@ const express=require('express');
 const app=express();
 const dotenv=require('dotenv');
 const bodyParser=require('body-parser');
-// const cors=require('cors');
-// const path=require('path');
+const cors=require('cors');
+const path=require('path');
 
 // route
 const certificateRoute=require('./routers/certificateRoute');
 
 app.use(express.json());
 app.use(bodyParser.json());
-// app.use(cors());
+app.use(cors());
 
 dotenv.config();
 
